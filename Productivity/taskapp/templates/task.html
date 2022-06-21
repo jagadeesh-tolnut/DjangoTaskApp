@@ -12,7 +12,7 @@
   </head>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Do it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,9 +27,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Daily Notes</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -37,6 +37,28 @@
   <body>
       <div class="container">
         <h1>{{ content }}</h1>
+      </div>
+      <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Status</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for obj in tasks %}
+          <tr>
+            <th scope="row">{{obj.task}}</th>
+            <td>{{obj.status}}</td>
+            <td>edit</td>
+            <td>delete</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
       </div>
     
 
