@@ -1,9 +1,13 @@
 from django.shortcuts import render
+from taskapp.models import TaskList
 
 # Create your views here.
 
 def taskHome(request):
+    all_tasks = TaskList.objects.all
+
     context = {
-        "content":"Hello Vishwa, How are you?",
+        "tasks":all_tasks,
+        
     }
     return render(request, "task.html",context)
