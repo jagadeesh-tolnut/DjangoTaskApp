@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from taskapp.models import TaskList
 
+
+
 # Create your views here.
 
 def taskHome(request):
