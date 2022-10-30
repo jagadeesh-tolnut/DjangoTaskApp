@@ -9,7 +9,8 @@ def taskHome(request):
     all_tasks = TaskList.objects.all
 
     context = {
-        "tasks":all_tasks,
+        "tasks": all_tasks,
+        "todohead": "Your Todo List"
         
     }
     return render(request, "task.html",context)

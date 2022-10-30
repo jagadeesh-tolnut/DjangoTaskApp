@@ -36,7 +36,15 @@
   </nav>
   <body>
       <div class="container">
-        <h1>{{ content }}</h1>
+        <br>
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter New Task">
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+        <br>
+        <h3 align="left">{{ todohead }}</h3>
       </div>
       <div class="container">
       <table class="table">
